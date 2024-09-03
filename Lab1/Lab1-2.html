@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Lianne"/>
+	<title>Task 1.2 HTML and CSS Demo Page</title>
+	<!--Insert description of exercise  -->
+    
+	<style>
+        img{
+            width: 600px;
+        }
+        body{
+            margin-left: 5%;
+            background-color:#d9d5d2;
+            
+        }
+       button{
+        color:#cfc4ae;
+        background-color: #f5f2ec;
+        font-size: 20px;
+        border-width: 0;
+        margin-left: 5%;
+        padding: 0.5em;
+        border-radius:5px;
+        box-shadow: 3px 3px ;
+        font-weight:bold ;
+       }
+       
+       button:hover{
+        color:black
+       }
+       figcaption{
+        margin-left: 25%;
+       }
+       h1,h2,h3{
+        color: #131210;
+        text-shadow: 2px 2px  #ffffff; 
+        font-family: "Qwitcher Grypen", cursive;
+       }
+       .nav-list {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        display: flex; /* Arrange items in a row */
+        justify-content: flex-start; /* Align items to the left */
+        }
+
+        .nav-list li {
+            margin-right: 10px; /* Add space between buttons */
+        }
+
+        .nav-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cfc4ae; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center;
+            font-weight:bold;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .nav-list li a:hover {
+            background-color: black; /* Change background color on hover */
+        }
+ 
+	</style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="../COS30045.html">Home</a></li>
+            <li><a href="Lab1-1.html">Lab1.1</a></li>
+            <li><a href="Lab1-2.html">Lab1.2</a></li>
+            <li><a href="Lab1-3.html">lab1.3</a></li>
+        </ul>
+    </nav>
+	<h1>Introduction if a pet into their house</h1>
+    <h2>Pets and the Pandemic</h2>
+	<h3>Author: Fong Lianne</h3>
+   
+    <p>
+        A report from Animal Medicines Australia (AMA) has found that many Australians took the opportunity to introduce a pet into their household during the pandemic. Their survey indicated that there was a significant increase in the percent of households taking in a new dog, fish or bird. Their research also indicated that pets had a number of positive influences on their lives such as:
+        <br></br>
+        <li>companionship</li>
+        <li>better mental health</li>
+        <li>joy and happiness.</li>
+        <br></br>
+     </p>
+
+    <div>
+        <button class="button1" onclick="show('../COS30045 1.1 Resources/__MACOSX/Year 2019.png','Fig1. Pet ownership australia 2019', 'Pet ownership australia 2019')">2019</button>
+        <button class="button2" onclick="show('../COS30045 1.1 Resources/__MACOSX/Year 2021.png','Fig2. Pet ownership australia 2021', 'Pet ownership australia 2019')">2021</button>
+        <button class="button3" onclick="show('../COS30045 1.1 Resources/__MACOSX/2019&2021.png','Fig3. Comparison of pet ownership australia 2019 vs 2021','Comparison of pet ownership australia 2019 vs 2021')">Both</button>
+    </div>
+
+    <figure>
+        <img id="images" src="../COS30045 1.1 Resources/__MACOSX/Year 2019.png" alt="Comparison pet pet_ownership in Australia 2019 vs 2021">
+        <figcaption id="description"> Fig. Pet ownership Australia</figcaption>
+	</figure>
+
+    <p>
+        With the increase in pet ownership the AMA are encouraging policy makers to consider the needs of companion animals and their owners when considering rental, strata and body corporate regulations are well as accepting animals in public places and transport.
+    </p>
+    
+	<footer>COS30045 Data Visualisation</footer>
+    <script src="Lab1.js"></script>
+</body>
+</html>
+

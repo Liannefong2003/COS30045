@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description"	content="Data Visualisation Exercise 1"/>
+        <meta name="keywords"		  content="HTML, CSS"/>
+        <meta name="author"			  content="Lianne"/>
+        <title>Task 2.1 D3 Data Binding</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="../COS30045.html">Home</a></li>
+                <li><a href="Lab2-1.html">Lab2.1</a></li>
+                <li><a href="Lab2-2.html">Lab2.2</a></li>
+                <li><a href="Lab2-3.html">lab2.3</a></li>
+                <li><a href="Lab2-4.html">lab2.4</a></li>
+            </ul>
+        </nav>
+        <h1>The D3 Journey</h1>
+        <style>
+        *{
+            padding-left: 1%;
+            background-color:#d9d5d2;
+        }
+        img{
+            width: 600px;
+            padding-left: 13%;
+        }
+       
+    figure{
+        padding-left: 10%;
+    }
+    h1,h2,h3{
+        color: #131210;
+        text-shadow: 2px 2px  #ffffff; 
+        font-family: "Qwitcher Grypen", cursive;
+       }
+       .nav-list {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        display: flex; /* Arrange items in a row */
+        justify-content: flex-start; /* Align items to the left */
+        }
+
+        .nav-list li {
+            margin-right: 10px; /* Add space between buttons */
+        }
+
+        .nav-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cfc4ae; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center;
+            font-weight:bold;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .nav-list li a:hover {
+            background-color: black; /* Change background color on hover */
+        }
+    </style>
+    
+        <script>
+            var dataset=[14, 5, 26, 23, 9];
+                d3.select("body").selectAll("p")
+                .data(dataset)
+                .enter()
+                .append("p")
+                .text(function(d){
+                    if (d >10){
+                        return "Joe watched " +d+" videos today"
+                    }
+                    else{
+                        return "Warning: Joe watched "+d+"cat videos today."
+                        }
+                })
+                .style("color",function(d)
+                {
+                    if (d>10){
+                        return "red"
+                    }
+                })
+        </script>
+
+        
+        <footer styles="color:grey">COS30045 Data Visualisation<br> Fong Lianne</footer>  
+
+    </body>
+</html>

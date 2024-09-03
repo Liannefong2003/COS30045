@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"/>   
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<head>
+	
+</head>
+
+<body>
+    <h1>COS 30045 Data Visualisation</h1>
+    <div class="all">
+        <div class="content-box">
+            <div class="label">Lab 1</div>
+                <div class="lab-links">
+                    <a href="Lab1/Lab1-1.html">Lab 1.1</a><br>
+                    <a href="Lab1/Lab1-2.html">Lab 1.2</a><br>
+                    <a href="Lab1/Lab1-3.html">Lab 1.3</a><br>
+            </div>
+            
+        </div>
+    
+    
+        <div class="content-box">
+            <div class="label">Lab 2</div>
+                <div class="lab-links">
+                    <a href="Lab2/Lab2-1.html">Lab 2.1</a><br>
+                    <a href="Lab2/Lab2-2.html">Lab 2.2</a><br>
+                    <a href="Lab2/Lab2-3.html">Lab 2.3</a><br>
+                    <a href="Lab2/Lab2-4.html">Lab 2.4</a><br>
+                </div>
+        </div>
+
+
+        <div class="content-box">
+            <div class="label">Lab 3</div>
+                <div class="lab-links">
+                    <a href="Lab1/Lab1-1.html">Lab 3.1</a><br>
+                    <a href="">Lab 3.2</a><br>
+                    <a href="">Lab 3.3</a><br>
+                </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <script>
+        const accordion = document.getElementsByClassName('content-box');
+
+        for (i = 0; i<accordion.length;i++){
+            accordion[i].addEventListener('click',function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>

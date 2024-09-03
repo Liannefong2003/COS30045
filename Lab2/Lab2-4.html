@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 2.4 Loading Data from CSV</title>
+
+	<link rel="stylesheet" href="Task_2.4.js">
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<style>
+	            body{
+                background-color:white;
+            }
+            .nav-list {
+                list-style-type: none; /* Remove bullet points */
+                padding: 0;
+                display: flex; /* Arrange items in a row */
+                justify-content: flex-start; /* Align items to the left */
+                }
+        
+                .nav-list li {
+                    margin-right: 10px; /* Add space between buttons */
+                }
+        
+                .nav-list li a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #cfc4ae; /* Button background color */
+                    color: white; /* Button text color */
+                    text-decoration: none; /* Remove underline */
+                    border-radius: 5px; /* Rounded corners */
+                    text-align: center;
+                    font-weight:bold;
+                    transition: background-color 0.3s ease; /* Smooth transition on hover */
+                }
+        
+                .nav-list li a:hover {
+                    background-color: black; /* Change background color on hover */
+                }
+</style>
+<body>
+	<nav class="navbar">
+		<ul class="nav-list">
+			<li><a href="../COS30045.html">Home</a></li>
+			<li><a href="Lab2-1.html">Lab2.1</a></li>
+			<li><a href="Lab2-2.html">Lab2.2</a></li>
+			<li><a href="Lab2-3.html">Lab2.3</a></li>
+			<li><a href="Lab2-4.html">Lab2.4</a></li>
+		</ul>
+	</nav>
+
+	<h1>Loading Data from CSV</h1>
+	<h2>Author: Lianne</h2>
+
+	<div id="chart"></div>
+	<script src="Task_2.4.js"></script>
+
+	<footer>COS30045 Data Visualisation</footer>
+
+</body>
+</html>

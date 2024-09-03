@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Lianne"/>
+	<title>Task 1.2 HTML and CSS Demo Page</title>
+</head>
+<style>
+    p{
+        font-weight: bold ;
+        font-size: 20px;
+    }
+    body{
+        background-color:#d9d5d2;
+        padding-left:5%
+    }
+    .nav-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-start; /* Align items to the left */
+    }
+
+    .nav-list li {
+        margin-right: 10px; /* Add space between buttons */
+    }
+
+    .nav-list li a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #cfc4ae; /* Button background color */
+        color: white; /* Button text color */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center;
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+
+    .nav-list li a:hover {
+        
+        background-color: black; /* Change background color on hover */
+    }
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="../COS30045.html">Home</a></li>
+            <li><a href="Lab1-1.html">Lab1.1</a></li>
+            <li><a href="Lab1-2.html">Lab1.2</a></li>
+            <li><a href="Lab1-3.html">Lab1.3</a></li>
+        </ul>
+    </nav>
+    <h1>Drawing Shape with SVG</h1>
+
+    <svg width="500" height="60" style="background-color: slategrey;">
+        <g transform="translate(20, 0)">
+            <circle cx="25" cy="30" r="25" fill="cornflowerblue" />
+            <rect x="50" y="5" width="50" height="50" fill="rgb(100, 149, 237)" />
+            <ellipse cx="140" cy="30" rx="40" ry="25" fill="rgba(100, 149, 237, 0.5)" />
+            <line x1="0" y1="30" x2="180" y2="30" stroke="black" stroke-width="5" />
+        </g>
+    </svg>
+    <br><br>
+    <p>Pet Ownership in 2019</p>
+    <svg  width="550" height="300" style="background-color: slategrey;">
+        <rect  x="50" y="150" width="60" height="100" fill="rgb(100, 149, 237)" />
+        <rect  x="117" y="170" width="60" height="80" fill="rgb(100, 149, 237)" />
+        <rect  x="184" y="220" width="60" height="30" fill="rgb(100, 149, 237)" />
+        <rect  x="251" y="240" width="60" height="10" fill="rgb(100, 149, 237)" />
+        <rect  x="318" y="247" width="60" height="3" fill="rgb(100, 149, 237)" />
+        <rect  x="385" y="247" width="60" height="3" fill="rgb(100, 149, 237)" />
+    </svg>
+
+
+    <footer style="color:grey">
+        COS30045 Data Visualisation<br>
+        Fong Lianne
+    </footer>
+</body>
+</html>

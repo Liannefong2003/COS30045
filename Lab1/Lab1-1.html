@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Lianne"/>
+	<title>Task 1.1 HTML and CSS Demo Page</title>
+	<style>
+        *{
+            padding-left: 1%;
+            background-color:#d9d5d2;
+        }
+        img{
+            width: 600px;
+            padding-left: 13%;
+        }
+       
+    figure{
+        padding-left: 10%;
+    }
+    h1,h2,h3{
+        color: #131210;
+        text-shadow: 2px 2px  #ffffff; 
+        font-family: "Qwitcher Grypen", cursive;
+       }
+       .nav-list {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        display: flex; /* Arrange items in a row */
+        justify-content: flex-start; /* Align items to the left */
+        }
+
+        .nav-list li {
+            margin-right: 10px; /* Add space between buttons */
+        }
+
+        .nav-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cfc4ae; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center;
+            font-weight:bold;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .nav-list li a:hover {
+            background-color: black; /* Change background color on hover */
+        }
+/*         
+        .pic {
+            display: flex;
+            justify-content: space-around; 
+        }
+
+        .pic img {
+            width: 30%; 
+            padding-left: 0;
+        } */
+
+ 
+	</style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="../COS30045.html">Home</a></li>
+            <li><a href="Lab1-1.html">Lab1.1</a></li>
+            <li><a href="Lab1-2.html">Lab1.2</a></li>
+            <li><a href="Lab1-3.html">lab1.3</a></li>
+        </ul>
+    </nav>
+	<h1>Introduction if a pet into their house</h1>
+    <h2>Pets and the Pandemic</h2>
+	<h3>Author: Fong Lianne</h3>
+   
+    <p>
+        A report from Animal Medicines Australia (AMA) has found that many Australians took the opportunity to introduce a pet into their household during the pandemic.<br> 
+        Their survey indicated that there was a significant increase in the percent of households taking in a new dog, fish or bird. Their research also indicated that pets had a<br>
+        number of positive influences on their lives such as:
+        <br></br>
+        <li>companionship</li>
+        <li>better mental health</li>
+        <li>joy and happiness.</li>
+        <br></br>
+    </p>
+    <img src="../COS30045 1.1 Resources/__MACOSX/pet_ownership_in_australia_table.png">
+    <figure>
+        Fig 1. Comparison of Pet Ownership in 2019 and 2021. Data Sorce:
+        <a href="https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf">Animal Medicines Australia Report</a>
+        <!-- <div id="pic">
+            <img src="../COS30045 1.1 Resources/__MACOSX/cat.jpg">
+            <img src="../COS30045 1.1 Resources/__MACOSX/fish.jpg">
+            <img src="../COS30045 1.1 Resources/__MACOSX/dog.png">
+        </div>
+    </figure> -->
+    <p>
+        With the increase in pet ownership the AMA are encouraging policy makers to consider the needs of companion animals and their owners when considering rental,<br>
+        strata and body corporate regulations are well as accepting animals in public places and transport.
+    </p>
+	<footer>COS30045 Data Visualisation</footer>
