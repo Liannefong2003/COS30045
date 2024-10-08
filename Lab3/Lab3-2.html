@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -137,4 +138,148 @@
 	<footer>COS30045 Data Visualisation</footer>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 3.2 D3 Adding Axis to Chart</title>
+
+	<link rel="stylesheet" href="../Lab.css">
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <style>
+        body{
+            padding-left: 1%;
+            background-color:#d9d5d2;
+        }
+        .nav-list {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            display: flex; /* Arrange items in a row */
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        .nav-list li {
+            margin-right: 10px; /* Add space between buttons */
+        }
+
+        .nav-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cfc4ae; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center;
+            font-weight:bold;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .nav-list li a:hover {
+            background-color: black; /* Change background color on hover */
+        }
+</style>
+<body>
+<header>   
+   <nav class="navbar">
+       <ul class="nav-list">
+           <li><a href="../COS30045.html">Home</a></li>
+           <li><a href="Lab3-1.html">Lab3.1</a></li>
+           <li><a href="Lab3-2.html">Lab3.2</a></li>
+       </ul>
+   </nav>
+</header>
+	<h1>Scatter Plot with Axis</h1>
+	<h2>Author: Lianne</h2>
+
+	<script>
+		var dataset = [
+			[5,20,2],
+			[480,90,3],
+			[250,50,5],
+			[100,33,6],
+			[330,95,8],
+			[410,12,6],
+			[475,44,3],
+			[25,67,7],
+			[85,21,9],
+			[220,88,2],
+            [700,33,5],
+            [60,440,3],
+		];
+
+		var padding = 10;
+		var w = 700+padding;
+		var h = 400+padding;
+
+        var xScale = d3.scaleLinear()
+        .domain([d3.min(dataset,function(d){
+            return d[0];
+        }),
+        d3.max(dataset,function(d){
+            return d[0];
+        })])
+        .range([padding*2,w-padding*4]);
+
+        var yScale = d3.scaleLinear()
+        .domain([d3.min(dataset,function(d){
+            return d[1];
+        }),
+        d3.max(dataset,function(d){
+            return d[1];
+        })])
+        .range([h-padding, padding*4]);
+		
+
+		
+        var svg = d3.select("body").append("svg").attr("width",w).attr("height",h);
+		svg.selectAll("circle").data(dataset).enter().append("circle")
+		.attr("cx",function(d){
+			return xScale(d[0])+padding;
+		})
+		.attr("cy",function(d){
+			return yScale(d[1])-padding;
+		})
+		.attr("r",function(d){
+			return d[2];
+		})
+		.attr("fill","blue");
+
+		svg.selectAll("text").data(dataset).enter().append("text")
+		.text(function(d){
+			return "("+d[0]+","+d[1]+")";
+		})
+		.attr("x",function(d){
+			return xScale(d[0])+padding;
+		})
+		.attr("y",function(d){
+			return yScale(d[1])-padding*2;
+		})
+		.attr("font-size","11px")
+		.attr("text-anchor","middle");
+
+
+		var xAxis = d3.axisBottom().ticks(5).scale(xScale);
+		svg.append("g")
+		.attr("transform","translate("+padding+", "+(h-padding*2)+")")
+		.call(xAxis);
+		var yAxis = d3.axisLeft().ticks(5).scale(yScale);
+		svg.append("g")
+		.attr("transform","translate("+(padding*3)+", "+(-padding)+")")
+		.call(yAxis);
+	</script>
+
+	<footer>COS30045 Data Visualisation</footer>
+
+</body>
+>>>>>>> d5930bf264d5a542d80c6e67e1b068d3f3aedc39
 </html>
