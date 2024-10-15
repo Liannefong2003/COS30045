@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 8.2 D3 Choropleths</title>
+
+	<link rel="stylesheet" href="../Lab.css">
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<style>
+		
+        body{
+            padding-left: 1%;
+        }
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .nav-list li {
+            margin-right: 10px;
+        }
+        .nav-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cfc4ae;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .nav-list li a:hover {
+            background-color: black;
+        }
+        h1, h2, h3 {
+            color: #131210;
+            text-shadow: 2px 2px lightgrey;
+            font-family: "Qwitcher Grypen", cursive;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #cfc4ae;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+        .div1 {
+			display: block;
+			flex-direction: column;
+			align-items: left;
+		}
+
+		.updateButton {
+			margin-bottom: 20px !important;
+		}
+        .line{
+            fill:none;
+            stroke:slategrey;
+            stroke-width: 0.5;
+        }
+	</style>
+</head>
+
+<body>
+    <header>   
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="../COS30045.html">Home</a></li>
+                <li><a href="Lab8-1.html">Lab8.1</a></li>
+                <li><a href="Lab8-2.html">Lab8.2</a></li>
+   
+            </ul>
+        </nav>
+    </header>
+
+	<h1>D3: Choropleths </h1>
+	<h2>Author: Lianne</h2>
+
+    <div id="chart"></div>  
+	<script src="Lab8-2.js"></script>
+    
+
+	<footer>COS30045 Data Visualisation</footer>
+
+</body>
+</html>
