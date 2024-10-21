@@ -21,7 +21,7 @@ var path = d3.geoPath()
             .projection(projection);
 
 d3.csv("../COS30045 8.1 and 8.2 Resources/VIC_LGA_unemployment.csv").then(function (dataset){
-    d3.json("../COS30045 8.1 and 8.2 Resources/LGA_VIC.json").then(function(json){
+    d3.json("https://raw.githubusercontent.com/Liannefong2003/COS30045/refs/heads/main/COS30045%208.1%20and%208.2%20Resources/LGA_VIC.json").then(function(json){
         for (var i = 0;i < dataset.length;i++){
             var dataLGA = dataset[i].LGA;
             var dataUnemployed = parseFloat(dataset[i].unemployed);
