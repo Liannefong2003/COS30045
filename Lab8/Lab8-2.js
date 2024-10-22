@@ -20,6 +20,16 @@ var projection=d3.geoMercator()
 var path = d3.geoPath()
             .projection(projection);
 
+ // Tooltip Box
+var tooltip = d3.select("body").append("div")
+                .style("position", "absolute")
+                .style("background-color", "white")
+                .style("border", "solid")
+                .style("border-width", "1px")
+                .style("border-radius", "5px")
+                .style("padding", "5px")
+                .style("display","none");
+
 d3.csv("../COS30045 8.1 and 8.2 Resources/VIC_LGA_unemployment.csv").then(function (dataset){
     d3.json("https://raw.githubusercontent.com/Liannefong2003/COS30045/refs/heads/main/COS30045%208.1%20and%208.2%20Resources/LGA_VIC.json").then(function(json){
         for (var i = 0;i < dataset.length;i++){
@@ -50,7 +60,7 @@ d3.csv("../COS30045 8.1 and 8.2 Resources/VIC_LGA_unemployment.csv").then(functi
             return value ? color(value) : "#ccc";
         });
 
-        d3.csv("Resources/VIC_city.csv").then(function(circleData){
+        d3.csv("../COS30045 8.1 and 8.2 Resources/VIC_city.csv").then(function(circleData){
             svg.selectAll("circle")
                 .data(circleData)
                 .enter()
@@ -62,7 +72,23 @@ d3.csv("../COS30045 8.1 and 8.2 Resources/VIC_LGA_unemployment.csv").then(functi
                     return projection([d.lon,d.lat])[1];
                 })
                 .attr("r",3)
-                .attr("fill","red");
+                .attr("fill","red")
+                .on("mouseover", function (event, d) {
+                    tooltip.style("display", "block");
+                    tooltip.html("City: " + d.place)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mousemove", function (event) {
+                    tooltip.style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mouseout", function () {
+                    tooltip.style("display", "none");
+                });;
         })
+      
     });
+
+      
 });
